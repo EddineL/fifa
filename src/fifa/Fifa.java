@@ -20,7 +20,7 @@ public class Fifa {
       
         
         Pays p0=new Pays("France",4);
-        p0.Ajoutclub(new Club());
+        //p0.Ajoutclub(new Club());
         
         Pays p1=new Pays("Espagne",4);
         Pays p2=new Pays("Allemagne", 4);

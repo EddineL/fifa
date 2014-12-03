@@ -17,9 +17,6 @@ public class Pays {
     int nbplaces;
     premiereDivision pd=new premiereDivision();
    
-  
-    
-
     public Pays(String nom, int nbplaces) {
         this.nom = nom;
         this.nbplaces = nbplaces;
@@ -30,4 +27,6 @@ public class Pays {
     }
         else{
     
+            }
+    }
 }
