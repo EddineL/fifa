@@ -10,14 +10,15 @@ package fifa;
  * @author Nacim
  */
 public class Club{
-    
+    String nom;
     String nation;
     int point;
     int division;
 
-    public Club(String nation, int point, int division) {
+    public Club(String nom,String nation, int division) {
+        this.nom=nom;
         this.nation = nation;
-        this.point = point;
+        this.point = 0;
         this.division = division;
     }
     

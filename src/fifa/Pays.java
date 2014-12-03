@@ -29,5 +29,7 @@ public class Pays {
     pd.club.add(c);
     }
         else{
-    
+               System.out.println(c.nom+" n'est pas un club du pays:"+this.nom);
+        }
+    }
 }
