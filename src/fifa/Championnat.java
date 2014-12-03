@@ -16,7 +16,7 @@ public abstract class Championnat {
     protected ArrayList<Club> club = new ArrayList<>();
 
     public Championnat() {
-        this.club = club;
+        
     }
     
     public void jouermatch(Club a, Club b){
@@ -48,17 +48,15 @@ public abstract class Championnat {
     }
     
     public void classement(){
-        
-        for(int i=0 ; i<club.size(); i++){
-            if(club.get(i).getPoint()>i){
-                
-            }
+        for(int i=0;i<club.size();i++){
+            
         }
+        
     
     }
-    /*public void ajouter1(Club c){
+    public void ajouter1(Club c){
         
-        if(c.getDivision()==1){
+        if(c.getDivision()=="un"){
             this.club.add(c);
         }else{
             System.out.println("Ce club ne peut pas être ajouté");
@@ -66,13 +64,13 @@ public abstract class Championnat {
     }
     
     public void ajouter2(Club c){
-        if(c.getDivision()==1){
+        if(c.getDivision()=="deux"){
             this.club.add(c);
         }else{
             System.out.println("Ce club ne peut pas être ajouté");
         }
     }
-    */
+    
     
     
 }
