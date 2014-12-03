@@ -56,7 +56,7 @@ public abstract class Championnat {
     }
     public void ajouter1(Club c){
         
-        if(c.getDivision()=="un"){
+        if(c.getDivision()=="1"){
             this.club.add(c);
         }else{
             System.out.println("Ce club ne peut pas être ajouté");
@@ -64,7 +64,7 @@ public abstract class Championnat {
     }
     
     public void ajouter2(Club c){
-        if(c.getDivision()=="deux"){
+        if(c.getDivision()=="2"){
             this.club.add(c);
         }else{
             System.out.println("Ce club ne peut pas être ajouté");
