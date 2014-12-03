@@ -15,19 +15,7 @@ public class premiereDivision extends Championnat{
         super();
     }
     
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     
     
     
     

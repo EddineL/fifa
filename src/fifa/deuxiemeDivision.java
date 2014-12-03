@@ -9,6 +9,8 @@ package fifa;
  *
  * @author Eddine Langer
  */
-public class deuxiemeDivision {
-    
+public class deuxiemeDivision extends Championnat{
+    public deuxiemeDivision() {
+        super();
+    }
 }
