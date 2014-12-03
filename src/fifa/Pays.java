@@ -16,17 +16,14 @@ public class Pays {
     String nom;
     int nbplaces;
     premiereDivision pd=new premiereDivision();
-   
-  
     
-
     public Pays(String nom, int nbplaces) {
         this.nom = nom;
         this.nbplaces = nbplaces;
     }
-    public void Ajoutclub(Club c){
-        if(c.nation.equals(this.nom)){
-    pd.club.add(c);
+    
+    public void addclub(Club c){
+        pd.club.add(c);
     }
         else{
                System.out.println(c.nom+" n'est pas un club du pays:"+this.nom);

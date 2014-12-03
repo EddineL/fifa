@@ -46,6 +46,18 @@ public class Fifa {
         p4.Ajoutclub(new Club("Palerme","Italie",1));
        
         p4.pd.saison();
+       PromotionClub p=new PromotionClub();
+       p.loadFileCSV();
+       Pays p1=new Pays("France",4);
+       Pays p2=new Pays("Angleterre",4);
+       Pays p3=new Pays("Espagne",4);
+       Pays p4=new Pays("Italie",4);
+       Pays p5=new Pays("Ecosse",4);
+       Pays p6=new Pays("Pays-Bas",4);
+       Pays p7=new Pays("Portugal",4);
+       Pays p8=new Pays("Allemagne",4);
+        
+        
     }
     
    

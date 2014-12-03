@@ -32,16 +32,38 @@ public class Club{
         this.point = point;
     }
 
-    public int getDivision() {
+    public void setNationalite(String nationalite) {
+        this.nationalite = nationalite;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNationalite() {
+        return nationalite;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public Club(String nom, String division, String nationalite ) {
+        
+        this.division = division;
+        this.nationalite = nationalite;
+        this.nom = nom;
+    }
+
+
+    public String getDivision() {
         return division;
     }
 
-    public void setDivision(int division) {
+    public void setDivision(String division) {
         this.division = division;
     }
 
-    
-    
     
     
     

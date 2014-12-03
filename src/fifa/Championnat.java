@@ -16,7 +16,7 @@ public abstract class Championnat {
     protected ArrayList<Club> club = new ArrayList<>();
     
     public Championnat() {
-        this.club = club;
+        
     }
     
     public void jouermatchAller(Club a, Club b){
@@ -86,6 +86,16 @@ public abstract class Championnat {
                 }
         }
     }
+    
+    public void ajouter2(Club c){
+        if(c.getDivision()=="2"){
+            this.club.add(c);
+        }else{
+            System.out.println("Ce club ne peut pas être ajouté");
+        }
     }
+    
+    
+    
 }
 //
