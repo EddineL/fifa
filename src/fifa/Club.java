@@ -9,7 +9,7 @@ package fifa;
  *
  * @author Nacim
  */
-public class Club{
+public class Club implements Comparable{
     String nom;
     String nationalite;
     int point;
@@ -63,6 +63,28 @@ public class Club{
     public void setDivision(String division) {
         this.division = division;
     }
+
+    @Override
+    public int compareTo(Object t) {
+        
+      int nombre1 = ((Club) t).getPoint(); 
+      int nombre2 = this.getPoint(); 
+      if (nombre1 > nombre2){  
+          return -1;
+      }
+      else if(nombre1 == nombre2){
+          int n1=((Club)t).getNbBut();
+          int n2=this.getNbBut();
+          if(n1>n2){
+              return -1;
+          }
+          else if(n1<n2){
+              return 1;
+          }
+      }
+      return 0;  }
+      
+   
 
     
     
