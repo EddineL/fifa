@@ -14,12 +14,23 @@ public class Club{
     String nationalite;
     int point;
     String division;
+    int nbBut;
+
+    public void setNbBut(int nbBut) {
+        this.nbBut = nbBut;
+    }
+
+    public int getNbBut() {
+        return nbBut;
+    }
+    
 
     public Club(String nom,String nation, String division) {
         this.nom=nom;
         this.nationalite= nation;
         this.point = 0;
         this.division = division;
+        this.nbBut=0;
     }
 
     public int getPoint() {
