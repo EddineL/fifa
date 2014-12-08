@@ -6,6 +6,8 @@
 package fifa;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import static java.util.Collections.reverseOrder;
 
 /**
  *
@@ -79,7 +81,7 @@ public abstract class Championnat {
             System.out.println("Le match est impossible, pas même division");
         }
     }
-
+/*
     public ArrayList<Club> classement(){
         int premier=0;
         int deuxieme=0;
@@ -88,6 +90,7 @@ public abstract class Championnat {
         int cinquieme=0;
         int sixieme=0;
         ArrayList<Club> newlistclub = new ArrayList<>();
+        
         for(int i=0;i<club.size();i++){
             for(int j=0;j<club.size();j++){
                 if(j!=i){
@@ -132,7 +135,21 @@ public abstract class Championnat {
         
         return newlistclub;
     }
+*/
+     
 
+      public void classement(){
+        Collections.sort(this.club,reverseOrder());
+        System.out.println("Classement");
+        for(int i=0;i<club.size();i++){
+        System.out.println(club.get(i).getNom()+" Pts: "+club.get(i).getPoint()+" Buts: "+club.get(i).getNbBut());}
+        }
+  
+
+
+   
+              
+      
     public void saison() {
         for (int i = 0; i < club.size(); i++) {
             for (int j = i; j < club.size(); j++) {
