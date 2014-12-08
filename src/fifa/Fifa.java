@@ -20,24 +20,24 @@ public class Fifa {
         PromotionClub p = new PromotionClub();
         p.loadFileCSV();
         ArrayList<Pays> pays = new ArrayList<>();
-        Pays p1 = new Pays("France", 4);
-        Pays p2 = new Pays("Angleterre", 4);
-        Pays p3 = new Pays("Espagne", 4);
-        Pays p4 = new Pays("Italie", 4);
-        Pays p5 = new Pays("Ecosse", 4);
-        Pays p6 = new Pays("Pays-Bas", 4);
-        Pays p7 = new Pays("Portugal", 4);
-        Pays p8 = new Pays("Allemagne", 4);
-        pays.add(p1);
-        pays.add(p2);
-        pays.add(p3);
-        pays.add(p4);
-        pays.add(p5);
-        pays.add(p6);
-        pays.add(p7);
-        pays.add(p8);
+        Pays France = new Pays("France", 4);
+        Pays Angleterre = new Pays("Angleterre", 4);
+        Pays Espagne = new Pays("Espagne", 4);
+        Pays Italie = new Pays("Italie", 4);
+        Pays Ecosse = new Pays("Ecosse", 4);
+        Pays PaysBas = new Pays("Pays-Bas", 4);
+        Pays Portugal = new Pays("Portugal", 4);
+        Pays Allemagne = new Pays("Allemagne", 4);
+        pays.add(France);
+        pays.add(Angleterre);
+        pays.add(Espagne);
+        pays.add(Italie);
+        pays.add(Ecosse);
+        pays.add(PaysBas);
+        pays.add(Portugal);
+        pays.add(Allemagne);
         p.clubparPays(pays);
-        p1.getPd().saison();
+        France.getPd().saison();
 
     }
 
