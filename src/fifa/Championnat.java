@@ -22,9 +22,11 @@ public abstract class Championnat {
     public void jouermatchAller(Club a, Club b) {
         if (a.getDivision().equals(b.getDivision())) {
             System.out.println("Match aller ");
-            double as = 0.0, bs = 0.0;
-            as = Math.random() * 5;
-            bs = Math.random() * 5;
+            int as = 0, bs = 0;
+            as =(int)Math.random() * 5;
+            bs =(int)Math.random() * 5;
+            a.nbBut+=as;
+            b.nbBut+=bs;
             System.out.println("Score:" + a.nom + " " + (int) as + "-" + (int) bs + " " + b.nom);
             if (as > bs) {
                 a.setPoint(a.getPoint() + 3);
@@ -38,8 +40,8 @@ public abstract class Championnat {
                 a.setPoint(a.getPoint() + 1);
                 b.setPoint(b.getPoint() + 1);
                 System.out.println("match nul");
-                System.out.println(a.nom + " possede" + a.getPoint());
-                System.out.println(b.nom + " possede" + b.getPoint());
+                System.out.println(a.nom + " possede " + a.getPoint());
+                System.out.println(b.nom + " possede " + b.getPoint());
             }
             System.out.println("Le match est fini!");
         } else {
@@ -50,10 +52,14 @@ public abstract class Championnat {
     public void jouermatchRetour(Club a, Club b) {
         if (a.getDivision().equals(b.getDivision())) {
             System.out.println("Match retour ");
-            double as = 0.0, bs = 0.0;
-            as = Math.random() * 5;
-            bs = Math.random() * 5;
+            int as = 0, bs = 0;
+            as =(int)(Math.random() * 5);
+            bs =(int)(Math.random() * 5);
+            a.nbBut+=as;
+            b.nbBut+=bs;
+            
             System.out.println("Score:" + a.nom + " " + (int) as + "-" + (int) bs + " " + b.nom);
+            
             if (as > bs) {
                 a.setPoint(a.getPoint() + 3);
                 System.out.println(a.nom + " gagne");
@@ -62,12 +68,12 @@ public abstract class Championnat {
                 b.setPoint(b.getPoint() + 3);
                 System.out.println(b.nom + " gagne");
                 System.out.println(b.nom + " possede " + b.getPoint());
-            } else {
+            } else if (as==bs){
                 a.setPoint(a.getPoint() + 1);
                 b.setPoint(b.getPoint() + 1);
                 System.out.println("match nul");
-                System.out.println(a.nom + " possede" + a.getPoint());
-                System.out.println(b.nom + " possede" + b.getPoint());
+                System.out.println(a.nom + " possede " + a.getPoint());
+                System.out.println(b.nom + " possede " + b.getPoint());
             }
             System.out.println("Le match est fini!");
         } else {
@@ -88,8 +94,15 @@ public abstract class Championnat {
                 }
             }
         }
+        for(int a=0;a<club.size();a++){
+         System.out.println(club.get(a).getNom()+"possède "+club.get(a).getPoint()+" points " + "et "+club.get(a).getNbBut()+" buts");
+        }
     }
 }
+
+    
+    
+
     
   
     
