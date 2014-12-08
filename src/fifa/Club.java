@@ -11,18 +11,16 @@ package fifa;
  */
 public class Club{
     String nom;
-    String nation;
+    String nationalite;
     int point;
-    int division;
+    String division;
 
-    public Club(String nom,String nation, int division) {
+    public Club(String nom,String nation, String division) {
         this.nom=nom;
-        this.nation = nation;
+        this.nationalite= nation;
         this.point = 0;
         this.division = division;
     }
-    
-  
 
     public int getPoint() {
         return point;
@@ -48,12 +46,7 @@ public class Club{
         return nom;
     }
 
-    public Club(String nom, String division, String nationalite ) {
-        
-        this.division = division;
-        this.nationalite = nationalite;
-        this.nom = nom;
-    }
+  
 
 
     public String getDivision() {
