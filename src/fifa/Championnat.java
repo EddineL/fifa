@@ -25,8 +25,8 @@ public abstract class Championnat {
             int as = 0, bs = 0;
             as =(int)Math.random() * 5;
             bs =(int)Math.random() * 5;
-            a.nbBut+=as;
-            b.nbBut+=bs;
+            a.setNbBut(a.getNbBut()+as);
+            b.setNbBut(b.getNbBut()+bs);
             System.out.println("Score:" + a.nom + " " + (int) as + "-" + (int) bs + " " + b.nom);
             if (as > bs) {
                 a.setPoint(a.getPoint() + 3);
@@ -55,9 +55,8 @@ public abstract class Championnat {
             int as = 0, bs = 0;
             as =(int)(Math.random() * 5);
             bs =(int)(Math.random() * 5);
-            a.nbBut+=as;
-            b.nbBut+=bs;
-            
+             a.setNbBut(a.getNbBut()+as);
+            b.setNbBut(b.getNbBut()+bs);
             System.out.println("Score:" + a.nom + " " + (int) as + "-" + (int) bs + " " + b.nom);
             
             if (as > bs) {
