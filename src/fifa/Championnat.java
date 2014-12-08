@@ -23,8 +23,8 @@ public abstract class Championnat {
         if (a.getDivision().equals(b.getDivision())) {
             System.out.println("Match aller ");
             int as = 0, bs = 0;
-            as =(int)Math.random() * 5;
-            bs =(int)Math.random() * 5;
+            as =(int) (Math.random() * 5);
+            bs =(int) (Math.random() * 5);
             a.setNbBut(a.getNbBut()+as);
             b.setNbBut(b.getNbBut()+bs);
             System.out.println("Score:" + a.nom + " " + (int) as + "-" + (int) bs + " " + b.nom);
@@ -94,7 +94,7 @@ public abstract class Championnat {
             }
         }
         for(int a=0;a<club.size();a++){
-         System.out.println(club.get(a).getNom()+"possède "+club.get(a).getPoint()+" points " + "et "+club.get(a).getNbBut()+" buts");
+         System.out.println(club.get(a).getNom()+" possède "+club.get(a).getPoint()+" points " + "et "+club.get(a).getNbBut()+" buts");
         }
     }
 }

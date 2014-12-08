@@ -17,22 +17,55 @@ import javax.swing.JFileChooser;
  * @author Dante
  */
 public class PromotionClub {
-    private ArrayList<Club> list=new ArrayList<Club>();
+    private final ArrayList<Club> listClub;
 
     public PromotionClub(){
-        
+        listClub = new ArrayList<>();
     }
     
     public void addClub(Club c) {
-        list.add(c);
+        listClub.add(c);
         
+    }
+
+    public ArrayList<Club> getList() {
+        return listClub;
+    }
+    
+    public void clubparPays(ArrayList<Pays> pays){
+        for (Club c : listClub) {
+            switch (c.getNationalite()) {
+                case "France":
+                    pays.get(0).addclub(c);
+                    break;
+                case "Angleterre":
+                    pays.get(1).addclub(c);
+                    break;
+                case "Espagne":
+                    pays.get(2).addclub(c);
+                    break;
+                case "Italie":
+                    pays.get(3).addclub(c);
+                    break;
+                case "Ecosse":
+                    pays.get(4).addclub(c);
+                    break;
+                case "Pays-Bas":
+                    pays.get(5).addclub(c);
+                    break;
+                case "Portugal":
+                    pays.get(6).addclub(c);
+                    break;
+                case "Allemagne":
+                    pays.get(7).addclub(c);
+                    break;
+            }
+        }
     }
     
     public void loadFileCSV() {
         
         String ligne,nom,div,nation;
-        
-        
         try {
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setCurrentDirectory(new File("."));
@@ -53,5 +86,7 @@ public class PromotionClub {
             System.out.println("Probleme import csv");
         }
     }
+    
+    
     
 }
