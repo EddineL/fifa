@@ -94,7 +94,7 @@ public abstract class Championnat {
             }
         }
         for(int a=0;a<club.size();a++){
-         System.out.println(club.get(a).getNom()+"possède "+club.get(a).getPoint()+" points " + "et "+club.get(a).getNbBut()+" buts");
+         System.out.println(club.get(a).getNom()+" possède "+club.get(a).getPoint()+" points " + "et "+club.get(a).getNbBut()+" buts");
         }
     }
 }

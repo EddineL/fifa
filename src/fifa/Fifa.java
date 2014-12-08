@@ -15,8 +15,8 @@ public class Fifa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*PromotionClub p=new PromotionClub();
-         p.loadFileCSV();*/
+        PromotionClub p=new PromotionClub();
+        p.loadFileCSV();
         Pays p1 = new Pays("France", 4);
         p1.addclub(new Club("OL", "France", "1"));
         p1.addclub(new Club("OM", "France", "1"));
