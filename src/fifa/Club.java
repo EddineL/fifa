@@ -15,6 +15,14 @@ public class Club{
     int point;
     String division;
     int nbBut;
+    
+    public Club(String nom, String division, String nation) {
+        this.nom=nom;
+        this.nationalite= nation;
+        this.point = 0;
+        this.division = division;
+        this.nbBut=0;
+    }
 
     public void setNbBut(int nbBut) {
         this.nbBut = nbBut;
@@ -24,15 +32,6 @@ public class Club{
         return nbBut;
     }
     
-
-    public Club(String nom,String nation, String division) {
-        this.nom=nom;
-        this.nationalite= nation;
-        this.point = 0;
-        this.division = division;
-        this.nbBut=0;
-    }
-
     public int getPoint() {
         return point;
     }
@@ -56,9 +55,6 @@ public class Club{
     public String getNom() {
         return nom;
     }
-
-  
-
 
     public String getDivision() {
         return division;
