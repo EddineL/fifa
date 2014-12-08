@@ -38,6 +38,10 @@ public class Fifa {
         pays.add(Allemagne);
         p.clubparPays(pays);
         France.getPd().saison();
+        for(int i=0;i<6;i++){
+            System.out.println(France.getPd().classement().get(i).getNom());
+        
+        }
 
     }
 

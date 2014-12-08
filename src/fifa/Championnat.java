@@ -80,8 +80,57 @@ public abstract class Championnat {
         }
     }
 
-    public void classement() {
-
+    public ArrayList<Club> classement(){
+        int premier=0;
+        int deuxieme=0;
+        int troisieme=0;
+        int quatrieme=0;
+        int cinquieme=0;
+        int sixieme=0;
+        ArrayList<Club> newlistclub = new ArrayList<>();
+        for(int i=0;i<club.size();i++){
+            for(int j=0;j<club.size();j++){
+                if(j!=i){
+                    if(club.get(i).getPoint()>club.get(j).getPoint()){
+                        if(i==0){premier++;}
+                        if(i==1){deuxieme++;}
+                        if(i==2){troisieme++;}
+                        if(i==3){quatrieme++;}
+                        if(i==4){cinquieme++;}
+                        if(i==5){sixieme++;}
+                    }
+                }
+            }
+        }
+        int[] tab=new int[6];
+        tab[0] = premier;
+        tab[1] = deuxieme;
+        tab[2] = troisieme;
+        tab[3] = quatrieme;
+        tab[4] = cinquieme;
+        tab[5] = sixieme;
+        
+        
+        for(int comp=0;comp<6;comp++){
+            for(int p=0;p<5;p++){
+                if(tab[p]<tab[p+1]){
+                    int c=tab[p+1];
+                    tab[p+1]=tab[p];
+                    tab[p]=c;
+                }
+            }
+        }
+        for(int m=0;m<6;m++){
+            if(tab[m]==premier){newlistclub.add(club.get(0));}
+            if(tab[m]==deuxieme){newlistclub.add(club.get(1));}
+            if(tab[m]==troisieme){newlistclub.add(club.get(2));}
+            if(tab[m]==quatrieme){newlistclub.add(club.get(3));}
+            if(tab[m]==cinquieme){newlistclub.add(club.get(4));}
+            if(tab[m]==sixieme){newlistclub.add(club.get(5));}
+        }
+        
+        
+        return newlistclub;
     }
 
     public void saison() {
