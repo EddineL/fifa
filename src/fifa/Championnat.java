@@ -162,6 +162,9 @@ public abstract class Championnat {
         
     }
 
+    public ArrayList<Club> getlistclub(){
+        return club;
+    }
     public void saison() {
         for (int i = 0; i < club.size(); i++) {
             for (int j = i; j < club.size(); j++) {
