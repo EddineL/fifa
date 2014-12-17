@@ -56,6 +56,7 @@ public class vue_résultat extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable1.setEnabled(false);
         jScrollPane1.setViewportView(jTable1);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -72,6 +73,7 @@ public class vue_résultat extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTable2.setEnabled(false);
         jScrollPane2.setViewportView(jTable2);
 
         jLabel1.setText("Match");
