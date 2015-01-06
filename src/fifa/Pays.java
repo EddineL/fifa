@@ -21,15 +21,21 @@ public class Pays {
     }
     
     public void addclub(Club c){
-        if(c.nationalite.equals(this.nom)){
+        
             pd.club.add(c);
-        }else{
-            System.out.println(c.nom+" n'est pas un club du pays:"+this.nom);
-        }
+        
     }
 
     public premiereDivision getPd() {
         return pd;
+    }
+
+    public int getNbplaces() {
+        return nbplaces;
+    }
+
+    public void setNbplaces(int nbplaces) {
+        this.nbplaces = nbplaces;
     }
     
     
