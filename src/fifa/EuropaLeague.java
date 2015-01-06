@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class EuropaLeague {
       public EuropaLeague(ArrayList<Pays> listpays){
-        Pays    europa=new Pays("EuropaLeague",32);
+        Pays europa=new Pays("EuropaLeague",48);
         for(int i=0;i<listpays.size();i++){
             for(int j=0;j<4;j++){
                 europa.addclub(listpays.get(i).getPd().getlistclub().get(j));
@@ -22,6 +22,7 @@ public class EuropaLeague {
         }
         System.out.println("********Europa League********");
         System.out.println("les equipes qualifiées : ");
+
         for(int i=0;i<europa.getPd().getlistclub().size();i++){
             europa.getPd().getlistclub().get(i).setPoint(0);
             europa.getPd().getlistclub().get(i).setNbBut(0);
