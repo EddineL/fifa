@@ -15,8 +15,18 @@ public class LiguedesChampions {
     public LiguedesChampions(ArrayList<Pays> listpays, int nb){
         Pays LiguedesChamp=new Pays("LiguedesChamp",32);
         for(int i=0;i<listpays.size();i++){
-            for(int j=0;j<nb;j++){
-                LiguedesChamp.addclub(listpays.get(i).getPd().getlistclub().get(j));
+            if("Espagne".equals(listpays.get(i).getNom())){
+                for(int p=0;p<4;p++){
+                    LiguedesChamp.addclub(listpays.get(i).getPd().getlistclub().get(p));
+                }
+            }else if("Barrage".equals(listpays.get(i).getNom())){
+                for(int k=0;k<4;k++){
+                    LiguedesChamp.addclub(listpays.get(i).getPd().getlistclub().get(k));
+                }   
+            }else{
+                for(int j=0;j<nb;j++){
+                    LiguedesChamp.addclub(listpays.get(i).getPd().getlistclub().get(j));
+                }
             }
         }
         System.out.println("********LIGUE DES CHAMPIONS********");

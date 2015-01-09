@@ -59,6 +59,9 @@ public class PromotionClub {
                 case "Allemagne":
                     pays.get(7).addclub(c);
                     break;
+                case "Autriche":
+                    pays.get(8).addclub(c);
+                    break;
             }
         }
     }
@@ -83,7 +86,7 @@ public class PromotionClub {
                 input.close();
             }
         } catch (Exception exception) {
-            System.out.println("Probleme import csv");
+            System.out.println(exception);
         }
     }
     

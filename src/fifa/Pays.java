@@ -7,7 +7,7 @@ package fifa;
 
 /**
  *
- * @author Nacim
+ * @author Dante
  */
 public class Pays {
     
@@ -24,6 +24,10 @@ public class Pays {
         
             pd.club.add(c);
         
+    }
+
+    public String getNom() {
+        return nom;
     }
 
     public premiereDivision getPd() {
