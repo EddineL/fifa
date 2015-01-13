@@ -110,7 +110,7 @@ public abstract class Championnat {
             podium[i][2] = "" + club.get(i).getPoint();
             podium[i][3] = "" + club.get(i).getNbBut();
         }
-        vue_résultat v=new vue_résultat(matchs,podium);
+        Ma_Fenetre v=new Ma_Fenetre(matchs,podium);
         v.setVisible(true);
         
         

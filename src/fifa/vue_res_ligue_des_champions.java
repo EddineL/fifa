@@ -8,20 +8,18 @@ package fifa;
 
 /**
  *
- * @author p1306416
+ * @author Théophile
  */
-public class vue_résultat extends javax.swing.JFrame {
-    String[][] matchs;
+public class vue_res_ligue_des_champions extends javax.swing.JPanel {
+        String[][] matchs;
     String[][] classement;
     /**
-     * Creates new form vue_résultat
+     * Creates new form vue_res_ligue_des_champions
      */
-    public vue_résultat(String[][] matchs,String[][] classement) {
+    public vue_res_ligue_des_champions(String[][] matchs,String[][] classement) {
         this.matchs=matchs;
         this.classement=classement;
         initComponents();
-        this.setResizable(false);
-
     }
 
     /**
@@ -37,13 +35,10 @@ public class vue_résultat extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setBackground(new java.awt.Color(102, 102, 255));
         jTable1.setForeground(new java.awt.Color(255, 255, 255));
@@ -61,7 +56,6 @@ public class vue_résultat extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable1.setEnabled(false);
         jScrollPane1.setViewportView(jTable1);
 
         jTable2.setBackground(new java.awt.Color(255, 102, 102));
@@ -80,17 +74,16 @@ public class vue_résultat extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable2.setEnabled(false);
         jTable2.setGridColor(new java.awt.Color(255, 255, 255));
         jTable2.setSelectionBackground(new java.awt.Color(153, 204, 255));
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel1.setText("Match");
-
         jLabel2.setText("Classement");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        jLabel1.setText("Match");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -123,17 +116,10 @@ public class vue_résultat extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
-                .addGap(13, 13, 13))
+                .addContainerGap())
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
