@@ -22,12 +22,16 @@ public class Ma_Fenetre extends JFrame implements ActionListener{
     JMenuBar barre = new JMenuBar();
     JMenuItem ldc = new JMenuItem("Ligue des Champions");
     JMenuItem europa = new JMenuItem("EuropaLeague");
-    String[][] matchs;
-    String[][] classement;
+    String[][] matchs_league;
+    String[][] classement_league;
+    String[][] matchs_europa;
+    String[][] classement_europa;
     
-    Ma_Fenetre(String[][] matchs,String[][] classement){
-    this.matchs=matchs;
-    this.classement=classement;
+    Ma_Fenetre(String[][] matchs,String[][] classement,String[][] matchs_europa,String[][] classement_europa){
+    this.matchs_europa=matchs;
+    this.classement_europa=classement;
+    this.matchs_league=matchs;
+    this.classement_league=classement;
     barre.add(ldc);
     barre.add(europa);
     this.setJMenuBar(barre);
@@ -44,11 +48,11 @@ public class Ma_Fenetre extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==ldc) {
-             this.setContentPane(new vue_res_ligue_des_champions(matchs,classement));
+             this.setContentPane(new vue_res_ligue_des_champions(matchs_league,classement_league));
              this.setVisible(true);
         }
         if (e.getSource()==europa) {
-             this.setContentPane(new vue_res_europa());
+             this.setContentPane(new vue_res_europa(matchs_europa,classement_europa));
              this.setVisible(true);
         }
     }

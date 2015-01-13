@@ -110,7 +110,11 @@ public abstract class Championnat {
             podium[i][2] = "" + club.get(i).getPoint();
             podium[i][3] = "" + club.get(i).getNbBut();
         }
-        Ma_Fenetre v=new Ma_Fenetre(matchs,podium);
+        
+        String[][] matchs_europa=matchs;                 //à modifier pour jointure avec l'Europa
+        String[][] podium_europa=podium;        //à modifier pour jointure avec l'Europa
+        
+        Ma_Fenetre v=new Ma_Fenetre(matchs,podium,matchs_europa,podium_europa);    
         
         
     }
