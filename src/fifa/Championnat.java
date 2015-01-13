@@ -111,7 +111,6 @@ public abstract class Championnat {
             podium[i][3] = "" + club.get(i).getNbBut();
         }
         Ma_Fenetre v=new Ma_Fenetre(matchs,podium);
-        v.setVisible(true);
         
         
     }
